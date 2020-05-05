@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On tAp CSS Buoi 4</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(4,100px);
+             grid-template-areas:
+             " header       header          header          header"
+             " aside-left   main            main            aside-right"
+             " footer-left  footer-left     footer-right    footer-right"
+             " footer       footer          footer          footer " ;
+        }
+        .container .item{
+            border-radius: 10px;
+            text-align: center;
+            
+        }
+        .container .item1{
+              background-color: burlywood;
+             grid-area: header;
+        }
+        .container .item2{
+            background-color: cadetblue;
+             grid-area: aside-left;
+        }
+        .container .item3{
+            background-color: chocolate;
+            grid-area: main;
+        }
+        .container .item4{
+            background-color: darkorchid;
+             grid-area: aside-right;
+        }
+        .container .item5{
+            background-color: cyan;
+             grid-area: footer-left;
+        }
+        .container .item6{
+            background-color: darkgreen;
+             grid-area: footer-right;
+        }
+        .container .item7{
+            background-color: darkslategray;
+             grid-area: footer; 
+        }
+        /* For tablet */
+        @media screen and (max-width: 900px){
+            .container{
+             grid-template-columns: repeat(4 ,1fr);
+             grid-template-rows: repeat(5,100px);
+             grid-template-areas:
+             " header header header header"
+             " aside-left aside-left aside-right aside-right"
+             "main main main main"
+             " footer-left footer-left footer-right footer-right"
+             " footer footer footer footer " ;
+            }
+        }
+        @media screen and(max-width: 600px){
+            .container{
+             grid-template-columns: 1fr;
+             grid-template-rows: repeat(7,100px);
+             grid-template-areas:
+             " header"
+             " aside-left"
+             " aside-right"
+             " main"
+             " footer-left"
+             "footer-right"
+             " footer" ;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item1">HEADER</div>
+        <div class="item item2">ASIDE-LEFT </div>
+        <div class="item item3">MAIN-CONTECT</div>
+        <div class="item item4">ASIDE-RIGHT</div>
+        <div class="item item5">FOOTER-LEFT</div>
+        <div class="item item6">FOOTER-RIGHT</div>
+        <div class="item item7">FOOTER</div>
+        <!-- <div class="item item6">8</div>
+        <div class="item item6">9</div>
+        <div class="item item6">10</div>
+        <div class="item item6 item111">11</div>
+        <div class="item item6">12</div>
+        <div class="item item6 item113">13</div>
+        <div class="item item6">14</div>
+        <div class="item item6">15</div>
+        <div class="item item6 item116">16</div> -->
+        <!-- <div class="item item6">17</div>
+        <div class="item item6">18</div>
+        <div class="item item6">19</div>
+        <div class="item item6">20</div>
+        <div class="item item6">21</div>
+        <div class="item item6">22</div>
+        <div class="item item6">23</div>
+        <div class="item item6">24</div>
+        <div class="item item6">25</div> -->
+    </div>
+</body>
+</html>
